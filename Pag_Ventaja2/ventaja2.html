@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventaja 2 - JSDoc</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ventaja 2: JSDoc y la Colaboración</h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+            <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+            <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+            <li><a href="../Pag_Desventajas2/desventajas2.html">Desventaja 2</a></li>
+        </ul>
+    </nav>
+
+    <section class="ventajas-colaboracion">
+        <div class="ventaja-item">
+            <h2>Facilita la colaboración</h2>
+            <p>Con una buena documentación generada automáticamente por JSDoc, otros desarrolladores pueden unirse a un proyecto con mayor facilidad.</p>
+            <br> <br> <br> <br>
+            <img src="../Imagenes/Ventajas2.png" alt="Colaboración" width="100%">
+        </div>
+        <div class="ventaja-item">
+            <h2>Compatible con varios IDEs</h2>
+            <p>Muchos editores de código y entornos de desarrollo integrados (IDEs) son compatibles con JSDoc, proporcionando sugerencias inteligentes y soporte en tiempo real.</p>
+           
+            <img src="../Imagenes/Ventajas2_2.png" alt="Compatibilidad con IDEs" width="100%">
+        </div>
+        <div class="ventaja-item">
+            <h2>Mejora la calidad del código</h2>
+            <p>Al escribir comentarios de JSDoc, los desarrolladores reflexionan sobre el propósito y diseño del código, mejorando la estructura y claridad del mismo.</p>
+            <br> <br>
+            <img src="../Imagenes/Ventajas2_3.png" alt="Mejora de la calidad del código" width="100%">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+        // Añadiendo animaciones de entrada
+        const items = document.querySelectorAll('.ventaja-item');
+        items.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, index * 300); // Retraso para animación escalonada
+        });
+    </script>
+</body>
+
+</html>

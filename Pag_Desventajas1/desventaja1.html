@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desventajas de JSDoc</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Desventajas de JSDoc</h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+            <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+            <li><a href="#">Desventaja 1</a></li>
+            <li><a href="../Pag_Desventajas2/desventajas2.html">Desventaja 2</a></li>
+        </ul>
+    </nav>
+
+    <section class="desventajas">
+        <div class="desventaja-item" data-direction="left">
+            <h2>Curva de Aprendizaje</h2>
+            <p>Puede ser complicado para desarrolladores que no están familiarizados con la sintaxis de JSDoc y su uso adecuado.</p>
+            <br> <br>
+            <img src="../Imagenes/desventajas1_1.png" alt="Descripción de la imagen 1" class="imagen-desventaja">
+        </div>
+        <div class="desventaja-item" data-direction="right">
+            <h2>Documentación Desactualizada</h2>
+            <p>Si no se actualizan los comentarios junto con el código, la documentación puede volverse incorrecta o confusa.</p>
+            <img src="../Imagenes/desventajas1_3.png" alt="Descripción de la imagen 2" class="imagen-desventaja">
+        </div>
+        <div class="desventaja-item" data-direction="top">
+            <h2>Sobrecarga de Comentarios</h2>
+            <p>A veces, los desarrolladores pueden abusar de los comentarios, lo que lleva a un código desordenado y difícil de leer.</p>
+            <br> <br>
+            <img src="../Imagenes/desventajas1_2.png" alt="Descripción de la imagen 3" class="imagen-desventaja">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+        // Obtener todos los elementos de desventaja
+        const items = document.querySelectorAll('.desventaja-item');
+
+        // Función para mostrar los elementos con animación de desplazamiento
+        function showItems() {
+            items.forEach((item, index) => {
+                const direction = item.getAttribute('data-direction');
+                let translateX = 0;
+                let translateY = 0;
+
+                // Determinar la dirección de desplazamiento
+                switch (direction) {
+                    case 'left':
+                        translateX = '-100%';
+                        break;
+                    case 'right':
+                        translateX = '100%';
+                        break;
+                    case 'top':
+                        translateY = '-100%';
+                        break;
+                }
+
+                item.style.transform = `translate(${translateX}, ${translateY})`;
+                item.style.opacity = '0'; // Comienza invisible
+
+                setTimeout(() => {
+                    item.style.transform = 'translate(0, 0)';
+                    item.style.opacity = '1'; // Se vuelve visible
+                }, index * 300); // Cada item aparecerá con un retraso
+            });
+        }
+
+        // Llamar a la función para mostrar los items al cargar la página
+        window.onload = showItems;
+    </script>
+
+</body>
+
+</html>

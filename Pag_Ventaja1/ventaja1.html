@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventajas de JSDoc</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ventajas de JSDoc</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+            <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+            <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+            <li><a href="../Pag_Desventajas2/desventajas2.html">Desventaja 2</a></li>
+        </ul>
+    </nav>
+
+    <section class="ventajas">
+        <div class="ventaja">
+            <h2>Mejora la claridad del código</h2>
+            <p>JSDoc permite documentar funciones, parámetros, clases, y métodos directamente en el código. Esto facilita a los desarrolladores entender la funcionalidad de cada parte del código sin necesidad de revisarlo en detalle.</p>
+            <img src="../Imagenes/ventaja1_1.jpg" alt="Descripción de la imagen 1" class="imagen-ventaja">
+        </div>
+        <div class="ventaja">
+            <h2>Documentación automática</h2>
+            <p>JSDoc genera documentación en formato HTML de manera automática. Solo necesitas escribir comentarios siguiendo la sintaxis estándar, y JSDoc se encarga de generar páginas web organizadas y fáciles de navegar.</p>
+            <img src="../Imagenes/ventajas1_2.png" alt="Descripción de la imagen 2" class="imagen-ventaja">
+        </div>
+        <div class="ventaja">
+            <h2>Fácil de mantener</h2>
+            <p>Al mantener la documentación junto con el código, se reduce el riesgo de que la documentación quede desactualizada. La documentación se puede actualizar rápidamente cuando se realizan cambios en el código.</p>
+            <img src="../Imagenes/ventajas1_3.png" alt="Descripción de la imagen 3" class="imagen-ventaja">
+        </div>
+    </section>
+
+    <section class="media">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_ugRzPfQ8Zg?si=emEQwrZhUwWyHls-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+        const cuadros = document.querySelectorAll('.ventaja');
+        cuadros.forEach(cuadro => {
+            cuadro.addEventListener('mouseenter', () => {
+                cuadro.style.transform = 'scale(1.05)';
+            });
+            cuadro.addEventListener('mouseleave', () => {
+                cuadro.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

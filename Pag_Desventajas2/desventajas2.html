@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desventajas de JSDoc</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Desventajas de JSDoc</h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+            <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+            <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+            <li><a href="#">Desventaja 2</a></li>
+        </ul>
+    </nav>
+
+    <section class="desventajas">
+        <div class="desventaja-item" data-delay="0">
+            <h2>Limitaciones en la Personalización</h2>
+            <p>Aunque JSDoc genera documentación automáticamente, puede ser limitado en cuanto a la personalización del estilo y la estructura de la documentación generada.</p>
+            <img src="../Imagenes/desventajas2_1.png" alt="Descripción de la imagen 1" class="desventaja-imagen">
+        </div>
+        <div class="desventaja-item" data-delay="300">
+            <h2>No Captura Todo el Contexto</h2>
+            <p>La documentación generada puede no captar todos los matices del código, especialmente en proyectos complejos.</p>
+            <img src="../Imagenes/desventajas2_2.png" alt="Descripción de la imagen 2" class="desventaja-imagen">
+        </div>
+        <div class="desventaja-item" data-delay="600">
+            <h2>Dependencia de Comentarios</h2>
+            <p>Si los desarrolladores no escriben buenos comentarios, la calidad de la documentación resultante puede ser deficiente.</p>
+            <img src="../Imagenes/desventajas2_3.png" alt="Descripción de la imagen 3" class="desventaja-imagen">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+        // Obtener todos los elementos de desventaja
+        const items = document.querySelectorAll('.desventaja-item');
+
+        // Función para mostrar los elementos con animación de rotación al cargar
+        function showItems() {
+            items.forEach((item) => {
+                const delay = item.getAttribute('data-delay');
+                item.style.transform = 'rotateY(180deg)'; // Comienza rotado
+                item.style.opacity = '0'; // Comienza invisible
+
+                setTimeout(() => {
+                    item.style.transform = 'rotateY(0deg)'; // Vuelve a su posición original
+                    item.style.opacity = '1'; // Se vuelve visible
+                }, delay);
+            });
+        }
+
+        // Llamar a la función para mostrar los items al cargar la página
+        window.onload = showItems;
+    </script>
+
+</body>
+
+</html>

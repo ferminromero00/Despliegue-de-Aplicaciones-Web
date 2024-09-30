@@ -1,0 +1,96 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f1f2; /* Mismo fondo que la página de ventaja 2 */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    background-color: #333;
+    padding: 10px;
+}
+
+.barra-navegacion ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.barra-navegacion ul li {
+    margin: 0 15px;
+}
+
+.barra-navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+}
+
+.barra-navegacion ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para la sección de Desventajas */
+.desventajas {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que sean responsivos */
+}
+
+.desventaja-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px; /* Aumenta el tamaño máximo del cuadro */
+    padding: 30px; /* Aumenta el padding para más espacio interno */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg); /* Comienza rotado */
+    opacity: 0; /* Comienza invisible */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.desventaja-item h2 {
+    color: #00796b; /* Color del encabezado */
+}
+
+.desventaja-item p {
+    font-size: 1.1em; /* Aumenta el tamaño del texto */
+    color: #333;
+}
+
+/* Imagenes de las desventajas */
+.desventaja-imagen {
+    max-width: 100%; /* Asegura que las imágenes ocupen el 100% del cuadro */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 8px; /* Esquinas redondeadas para las imágenes */
+    margin-top: 10px; /* Espacio superior entre el texto y la imagen */
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

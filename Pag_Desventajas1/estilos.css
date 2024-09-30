@@ -1,0 +1,94 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f1f2; /* Mismo fondo que la página de ventaja 2 */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    background-color: #333;
+    padding: 10px;
+}
+
+.barra-navegacion ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.barra-navegacion ul li {
+    margin: 0 15px;
+}
+
+.barra-navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+}
+
+.barra-navegacion ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para la sección de Desventajas */
+.desventajas {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que sean responsivos */
+}
+
+.desventaja-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Comienza invisible */
+}
+
+.desventaja-item h2 {
+    color: #00796b; /* Color del encabezado */
+}
+
+.desventaja-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilos para las imágenes */
+.imagen-desventaja {
+    max-width: 100%; /* Se ajusta al contenedor */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
